@@ -1,114 +1,23 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
-
-    <!-- importation -->
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-</head>
+<?php
+include("entete.php");
+?>
 
 <body>
     <!-- page -->
     <main class="min-h-screen w-full text-gray-700" x-data="layout">
         <!-- header page -->
-        <header class="flex w-full items-center justify-between shadow-md bg-white p-2 fixed z-40">
-            <!-- logo -->
-            <div class="flex items-center space-x-2">
-                <button type="button" class="text-3xl" @click="asideOpen = !asideOpen">
-                    <i class="bx bx-menu"></i>
-                </button>
-                <div>
-                    <img src="images/logo.png" class="w-40 cursor-pointer" />
-                </div>
-            </div>
-
-            <!-- button profile -->
-            <div>
-                <button type="button" @click="profileOpen = !profileOpen" @click.outside="profileOpen = false"
-                    class="h-9 w-9 overflow-hidden rounded-full">
-                    <img src="https://plchldr.co/i/40x40?bg=111111" alt="plchldr.co" />
-                </button>
-
-                <!-- dropdown profile -->
-                <div class="absolute right-2 mt-1 w-48 divide-y divide-gray-200 rounded-md border border-gray-200 bg-white shadow-md"
-                    x-show="profileOpen" x-transition>
-                    <div class="flex items-center space-x-2 p-2">
-                        <img src="https://plchldr.co/i/40x40?bg=111111" alt="plchldr.co" class="h-9 w-9 rounded-full" />
-                        <div class="font-medium">Hafiz Haziq</div>
-                    </div>
-
-                    <div class="flex flex-col space-y-3 p-2">
-                        <a href="#" class="transition hover:text-blue-600">My Profile</a>
-                        <a href="#" class="transition hover:text-blue-600">Edit Profile</a>
-                        <a href="#" class="transition hover:text-blue-600">Settings</a>
-                    </div>
-
-                    <div class="p-2">
-                        <button class="flex items-center space-x-2 transition hover:text-blue-600">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
-                                </path>
-                            </svg>
-                            <div>Log Out</div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+        <?php
+        include("header.php");
+        ?>
         <div class="flex">
             <!-- aside -->
-            <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh"
-                x-show="asideOpen">
-                <div class="fixed mt-20">
-                    <a href="#"
-                        class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-yellow-600">
-                        <span class="text-2xl"><i class="bx bx-home"></i></span>
-                        <span>Dashboard</span>
-                    </a>
+            <?php
+            include("aside.php");
+            ?>
 
-                    <a href="#"
-                        class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
-                        <span class="text-2xl"><i class="bx bx-cart"></i></span>
-                        <span>Cart</span>
-                    </a>
-
-                    <a href="#"
-                        class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
-                        <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
-                        <span>Shopping</span>
-                    </a>
-
-                    <a href="#"
-                        class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
-                        <span class="text-2xl"><i class="bx bx-heart"></i></span>
-                        <span>My Favourite</span>
-                    </a>
-
-                    <a href="#"
-                        class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
-                        <span class="text-2xl"><i class="bx bx-user"></i></span>
-                        <span>Profile</span>
-                    </a>
-                </div>
-            </aside>
-
-            <!-- main content page -->
-            <!-- <div class="w-full p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis
-                magni doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae voluptate,
-                esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque eaque inventore iure. Modi sunt
-                optio mollitia repellat sed ab quibusdam quos harum!</div>
-            </div> -->
             <div class="container  mx-auto">
-                <div class="container w-full  p-4 bg-cover bg-center bg-no-repeat" 
-                style="background-image: url('images/image.png')">
+                <div class="container w-full  p-4 bg-cover bg-center bg-no-repeat"
+                    style="background-image: url('images/image.png')">
                     <div class="grid md:grid-cols-2 gap-4 text-white mt-40 px-5 xl:px-28">
                         <div class="">
                             <h1 class="text-5xl xl:text-6xl font-semibold leading-normal mb-4">
@@ -122,9 +31,9 @@
                             </p>
                             <div class="mb-8">
                                 <a href="#"
-                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 rounded-full py-3 px-8 font-medium inline-block mr-4 hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Connexion</a>
+                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 rounded-full py-3 px-8 font-medium inline-block mr-4 hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Inscription</a>
                                 <a href="#"
-                                    class="border-3 border-yellow-300 rounded-full py-3 px-8 font-medium inline-block hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Déconnexion
+                                    class="border-3 border-yellow-300 rounded-full py-3 px-8 font-medium inline-block hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Connexion
                                     <span class="text-lg inline-block transform rotate-90">&#10148;</span></a>
                             </div>
                         </div>
@@ -138,7 +47,8 @@
                 <h1 class="text-3xl font-semibold mt-40 text-center">Produit</h1>
 
                 <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -152,7 +62,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -174,7 +85,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -183,7 +95,8 @@
                         </div>
                     </div>
 
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -197,7 +110,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -219,7 +133,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -227,7 +142,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -241,7 +157,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -263,7 +180,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -271,7 +189,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -285,7 +204,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -307,7 +227,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -315,7 +236,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -329,7 +251,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -351,7 +274,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -359,7 +283,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+                    <div
+                        class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
                         <a class="relative flex h-60 overflow-hidden" href="#">
                             <img class="absolute top-0 right-0 h-full w-full object-cover"
                                 src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
@@ -373,7 +298,8 @@
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
                                 <button
                                     class="flex h-10 w-10 items-center justify-center bg-gray-900 text-white transition hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                             clip-rule="evenodd" />
@@ -395,7 +321,8 @@
                             </div>
                             <button
                                 class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
                                     <path
                                         d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
@@ -406,174 +333,23 @@
                 </div>
 
             </div>
-            
+
     </main>
-    <!-- component -->
-    <footer class="text-gray-600 body-font">
-        <div
-            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                        viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg>
-                    <span class="ml-3 text-xl">Footer</span>
-                </a>
-                <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
-            </div>
-            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="bg-gray-100">
-            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Footer —
-                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1"
-                        target="_blank">@MrsRobbot</a>
-                </p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-                    <a class="text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path
-                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                            <path stroke="none"
-                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
-                            </path>
-                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                        </svg>
-                    </a>
-                </span>
-            </div>
-        </div>
-    </footer>
+    <?php
+    include("footer.php");
+    ?>
+
 
     <script>
-        document.addEventListener("alpine:init", () => {
-            Alpine.data("layout", () => ({
-                profileOpen: false,
-                asideOpen: true,
-            }));
-        });
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("layout", () => ({
+            profileOpen: false,
+            asideOpen: true,
+        }));
+    });
     </script>
 
-    <!-- <div class="container min-h-screen bg-[url('images/image.png')] bg-center bg-cover px-28 py-5 relative">
-        <nav class="flex items-center">
-            <img src="images/logo.png" class="w-40 cursor-pointer">
-            <ul class="flex-1 text-center">
-                <li class="list-none inline-block px-5"><a class="non-underline text-white px-2" href="#">Acueil</a>
-                </li>
-                <li class="list-none inline-block px-5"><a class="non-underline text-white px-2" href="#">a propos</a>
-                </li>
-                <li class="list-none inline-block px-5"><a class="non-underline text-white px-2" href="#">Feature</a>
-                </li>
-                <li class="list-none inline-block px-5"><a class="non-underline text-white px-2" href="#">Contact</a>
-                </li>
-            </ul>
-            <img src="images/cart.png" class="w-8 cursor-pointer" alt="">
-        </nav>
-        <div class="text-white mt-48 max-w-xl">
-            <h1 class="text-6xl font-semibold leading-norm">Grceries<br>delivery in <span class="font-light">15
-                    mins</span></h1>
-            <p>Grocify offer a wide range of products, including fresh products,meats,dairy,baked goods and
-                non-perishable items</p>
-            <div class="mt-10">
-                <a href="#"
-                    class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Connexion</a>
-                <a href="#" class="border-3 border-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 mt-4 hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent
-                ">Deconnexion <span class="text-lg inline-block rotate-90">&#10148</span></a>
-            </div>
-            <img src="images/grocery-image.png" class="w-full xl:w-1/2 xl:absolute bottom-0 right-20" alt="">
-        </div>
-    </div> -->
+
 </body>
 
 </html>
