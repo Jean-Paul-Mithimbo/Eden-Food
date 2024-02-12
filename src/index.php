@@ -30,17 +30,73 @@ include("entete.php");
                                 produits de boulangerie et des articles non périssables.
                             </p>
                             <div class="mb-8">
-                                <a href="#"
-                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 rounded-full py-3 px-8 font-medium inline-block mr-4 hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Inscription</a>
-                                <a href="#"
-                                    class="border-3 border-yellow-300 rounded-full py-3 px-8 font-medium inline-block hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Connexion
-                                    <span class="text-lg inline-block transform rotate-90">&#10148;</span></a>
+                                <a href="inscription.php"
+                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 rounded-full py-3 px-8 font-medium inline-block mr-4 hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">
+                                    Inscription
+                                </a>
+
+                                <a href="#" class="border-3 border-yellow-300 rounded-full py-3 px-8 font-medium inline-block hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent
+                                    " onclick="openModal('modelConfirm')">Connexion
+                                    <span class="text-lg inline-block transform rotate-90">&#10148;</span>
+                                </a>
+
                             </div>
                         </div>
                         <div class="xl:relative">
                             <img src="images/grocery-image.png" class="w-full object-cover xl:absolute bottom-0 right-0"
                                 alt="Image de l'épicerie" />
                         </div>
+                    </div>
+                </div>
+                <!--modal  login-->
+                <div id="modelConfirm"
+                    class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
+                    <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+
+                        <div class="flex justify-end p-2">
+                            <button onclick="closeModal('modelConfirm')" type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6 pt-0 text-center">
+
+                            <img src="images/logo.png" class="w-40 cursor-pointer" />
+                            <!-- Formulaire login -->
+                            <h1 class="text-2xl font-bold text-gray-950 text-center">Login</h1><br>
+                            <form action="" class="space-y-6 text-gray-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-yellow-300">
+                                        <i class="fa-solid fa-envelope-open"></i>
+                                    </div>
+                                    <input type="email" placeholder="Email Address"
+                                        class="bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg border border-gray-300" />
+                                    <!-- Ajout de la classe 'border' et 'border-gray-300' pour définir la bordure -->
+                                </div>
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-yellow-300">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </div>
+                                    <input type="text" placeholder="Password"
+                                        class="bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg border border-gray-300" />
+                                    <!-- Ajout de la classe 'border' et 'border-gray-300' pour définir la bordure -->
+                                </div>
+                                <button
+                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 text-white w-80 font-semibold rounded-full py-2">Sign
+                                    in</button>
+                            </form>
+                            <!-- Formulaire login end -->
+
+                        </div>
+
                     </div>
                 </div>
                 <!-- card produit -->
@@ -55,8 +111,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -103,8 +161,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -150,8 +210,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -197,8 +259,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -244,8 +308,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -291,8 +357,10 @@ include("entete.php");
                                 alt="product image" />
                             <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
                                 <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
-                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
+                                <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent">
+                                </div>
                             </div>
                             <div
                                 class="absolute -right-16 bottom-0 mr-2 mb-4 space-y-2 transition-all duration-300 group-hover:right-0">
@@ -340,14 +408,7 @@ include("entete.php");
     ?>
 
 
-    <script>
-    document.addEventListener("alpine:init", () => {
-        Alpine.data("layout", () => ({
-            profileOpen: false,
-            asideOpen: true,
-        }));
-    });
-    </script>
+    <script src="js/app.js" type="text/javascript"></script>
 
 
 </body>

@@ -15,48 +15,82 @@ include("entete.php");
             include("aside.php");
             ?>
 
-            <div class="container grid md:grid-cols-3 mx-auto">
-                <div class="bg-white p-8 rounded shadow-md max-w-md w-full mx-auto">
-                    <h2 class="text-2xl font-semibold mb-4">Inscription</h2>
+            <!-- <div class="container  mx-auto flex justify-center p-4 mt-10">
+                <div class="  grid md:grid-cols-3 items-center gap-2 p-5 rounded-2xl flex justify-center">
 
-                    <form action="#" method="POST">
-                        <!-- Nom et Prénom -->
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-700">Prénom</label>
-                                <input type="text" id="firstName" name="firstName"
-                                    class="mt-1 p-2 w-full border rounded-md">
+
+                    <div class="md:col-span-2 shadow p-5">
+                        <h1 class="text-5xl font-bold text-gray-950 text-center">Login</h1>
+                        <p class="text-dull-white"></p>
+                        <form action="" class="space-y-6 text-white">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                                    <i class="fa-solid fa-envelope-open"></i>
+                                </div>
+                                <input type="email" placeholder="Email Address"
+                                    class="w-80 bg-gray-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg" />
                             </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-700">Nom</label>
-                                <input type="text" id="lastName" name="lastName"
-                                    class="mt-1 p-2 w-full border rounded-md">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <input type="text" placeholder="Password"
+                                    class="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg" />
                             </div>
+                            <button
+                                class="bg-gradient-to-r from-blue-400 to-cyan-200 w-80 font-semibold rounded-full py-2">Sign
+                                in</button>
+                        </form>
+                        <div class="text-dull-white border-t border-white-light pt-4 space-y-4 text-sm">
+                            <p>Don't have an account? <a class="text-neon-blue font-semibold cursor-pointer">Sign up</a>
+                            </p>
+                            <p>Forgot password? <a class="text-neon-blue font-semibold cursor-pointer">Reset
+                                    password</a></p>
+                            <p>Don't have a password yet? <a class="text-neon-blue font-semibold cursor-pointer">Set
+                                    password</a></p>
                         </div>
-
-                        <!-- Adresse email -->
-                        <div class="mt-4">
-                            <label for="email" class="block text-sm font-medium text-gray-700">Adresse email</label>
-                            <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
-                        </div>
-
-                        <!-- Mot de passe -->
-                        <div class="mt-4">
-                            <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
-                            <input type="password" id="password" name="password"
-                                class="mt-1 p-2 w-full border rounded-md">
-                        </div>
-
-                        <!-- Bouton d'inscription -->
-                        <div class="mt-6">
-                            <button type="submit"
-                                class="w-full p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">S'inscrire</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
 
 
+            </div> -->
+            <div class="container mx-auto flex justify-center  mt-25">
+                <div class="grid md:grid-cols-2 items-center gap-2 p-5 rounded-2xl flex justify-center">
+                    <div class="md:col-span-2 shadow p-5">
+                        <h1 class="text-5xl font-bold text-gray-950 text-center">Login</h1><br>
+                        <form action="" class="space-y-6 text-gray-600">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                                    <i class="fa-solid fa-envelope-open"></i>
+                                </div>
+                                <input type="email" placeholder="Email Address"
+                                    class=" bg-gray-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg" />
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <input type="text" placeholder="Password"
+                                    class=" bg-white-light py-2 px-12  outline-1 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-neon-blue focus:drop-shadow-lg" />
+                            </div>
+                            <button
+                                class="bg-gradient-to-r from-blue-400 to-cyan-200 w-80 font-semibold rounded-full py-2">Sign
+                                in</button>
+                        </form>
+                        <div class="text-dull-white border-t border-white-light pt-4 space-y-4 text-sm">
+                            <p>Don't have an account? <a class="text-neon-blue font-semibold cursor-pointer">Sign
+                                    up</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
     </main>
     <?php
