@@ -1,7 +1,8 @@
 <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh"
     x-show="asideOpen">
     <div class="fixed mt-20">
-        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-yellow-600">
+        <a href="index.php"
+            class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-yellow-600">
             <span class="text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13m7 7v-5h4v5zm2-15.586l6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586z" />
@@ -27,7 +28,7 @@
             <span>Shopping</span>
         </a>
 
-        <a href="#"
+        <a href="produit.php"
             class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
             <span class="text-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
@@ -59,7 +60,7 @@
             </span>
             <span>Profile</span>
         </a>
-        <a href="#"
+        <a href="admin.php"
             class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:hover:text-yellow-400">
             <span class="text-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">

@@ -4,8 +4,8 @@ try {
     $base->exec("CREATE TABLE produit(idProd INT AUTO_INCREMENT PRIMARY KEY ,NomProd VARCHAR(200) NOT NULL ,Detail VARCHAR(200),
         PrixProd float ,PhotoProd VARCHAR(200) not null)");
 
-    $base->exec("CREATE TABLE client(idClient INT AUTO_INCREMENT PRIMARY KEY,NomClient VARCHAR(200) NOT NULL,PostNomClient VARCHAR(200)not null,
-                        PrenomClient VARCHAR(200)NOT NULL,AdresseClient VARCHAR (200)NOT NULL,EmailClient VARCHAR (200)NOT NULL,PasswordClient VARCHAR (200)NOT NULL)");
+    $base->exec("CREATE TABLE client(idClient INT AUTO_INCREMENT PRIMARY KEY,NomClient VARCHAR(200) NOT NULL,PostNomClient VARCHAR(200)not null,AdresseClient VARCHAR (200)NOT NULL,EmailClient VARCHAR (200)NOT NULL,PasswordClient VARCHAR (200)NOT NULL,
+                        PhotoClient VARCHAR(200)NOT NULL)");
     
 
     $base->exec("CREATE TABLE stock(idStock INT AUTO_INCREMENT PRIMARY KEY,idProd int,NomProd VARCHAR(200) NOT NULL,QntStock float)");

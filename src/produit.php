@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("entete.php");
+include("bdd/connexion.php");
 ?>
 
 <body>
@@ -10,46 +11,16 @@ include("entete.php");
         <?php
         include("header.php");
         ?>
+
         <div class="flex">
             <!-- aside -->
             <?php
             include("aside.php");
+
             ?>
 
-            <div class="container  mx-auto">
-                <div class="container w-full  p-4 bg-cover bg-center bg-no-repeat"
-                    style="background-image: url('assets/images/image.png')">
-                    <div class="grid md:grid-cols-2 gap-4 text-white mt-40 px-5 xl:px-28">
-                        <div class="">
-                            <h1 class="text-5xl xl:text-6xl font-semibold leading-normal mb-4">
-                                Livraison d'épicerie en
-                                <span class="font-light">15 minutes</span>
-                            </h1>
-                            <p class="mb-6">
-                                Grocify offre une large gamme de produits, y compris des
-                                produits frais, de la viande, des produits laitiers, des
-                                produits de boulangerie et des articles non périssables.
-                            </p>
-                            <div class="mb-8">
-                                <a href="inscription.php"
-                                    class="bg-gradient-to-r from-gray-900 to-yellow-400 rounded-full py-3 px-8 font-medium inline-block mr-4 hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">
-                                    Inscription
-                                </a>
 
-                                <a href="#" class="border-3 border-yellow-300 rounded-full py-3 px-8 font-medium inline-block hover:bg-yellow-300 hover:text-white duration-300 hover:border border border-transparent
-                                    " onclick="openModal('modelConfirm')">Connexion
-                                    <span class="text-lg inline-block transform rotate-90">&#10148;</span>
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="xl:relative">
-                            <img src="assets/images/grocery-image.png"
-                                class="w-full object-cover xl:absolute bottom-0 right-0" alt="Image de l'épicerie" />
-                        </div>
-                    </div>
-                </div>
-
+            <div class="container mx-auto flex justify-center py-5 mt-20">
                 <!-- card produit -->
                 <h1 class="text-3xl font-semibold mt-40 text-center">Produit</h1>
 
@@ -350,18 +321,25 @@ include("entete.php");
                         </div>
                     </div>
                 </div>
-
             </div>
 
+
     </main>
+
     <?php
     include("footer.php");
     ?>
 
+    <script>
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("layout", () => ({
+            profileOpen: false,
+            asideOpen: true,
+        }));
+    });
+    </script>
 
     <script src="js/app.js" type="text/javascript"></script>
-
-
 </body>
 
 </html>
